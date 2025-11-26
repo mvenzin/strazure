@@ -75,11 +75,10 @@ Before running the project you’ll need:
 ## Quick Start
 
 The easiest way to get everything running is via the terminal:
-
-```cd setup            ```
-
-```bash script.sh      ```
-
+```
+cd setup            
+bash script.sh
+```
 You will be prompted for the necessary logins and authorizations. For the Strava authorization, the browser will open automatically for you to do the necessary confirmations (log-in and authorize selection).
 
 ## Troubleshooting
