@@ -6,6 +6,19 @@ __*
 .venv/
 venv/
 
+# Local Terraform files
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+crash.*.log
+
+# Exclude sensitive variable files (optional)
+terraform.tfvars
+*.auto.tfvars
+
+!.terraform.lock.hcl
+
 # …but keep this .gitignore itself
 !.gitignore
 

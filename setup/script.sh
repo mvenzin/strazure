@@ -26,7 +26,7 @@ read -r ARM_CLIENT_ID ARM_CLIENT_SECRET ARM_TENANT_ID < <(
 export ARM_CLIENT_ID ARM_CLIENT_SECRET ARM_TENANT_ID ARM_SUBSCRIPTION_ID="$subscription_id"
 
 
-python3 init/get_secrets.py
+python3 setup/get_secrets.py
 export TF_VAR_secrets="$(< secrets.json)"
 
 
