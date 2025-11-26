@@ -136,7 +136,7 @@ resource "azurerm_linux_function_app" "func" {
 
 # ---------- Storage for Functions ----------
 resource "azurerm_storage_account" "sa_func" {
-  name                     = "mvenzinstravafunc"
+  name                     = "stravafunc"
   resource_group_name      = azurerm_resource_group.strava_rg.name
   location                 = azurerm_resource_group.strava_rg.location
   account_tier             = "Standard"
@@ -152,7 +152,7 @@ resource "azurerm_storage_account" "sa_func" {
 
 # ---------- Storage for data ----------
 resource "azurerm_storage_account" "sa_data" {
-  name                     = "mvenzinstravadata"
+  name                     = "stravadata"
   resource_group_name      = azurerm_resource_group.strava_rg.name
   location                 = azurerm_resource_group.strava_rg.location
   account_tier             = "Standard"
