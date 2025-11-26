@@ -91,6 +91,8 @@ The SQL database enforces a specific password policy. It must be > 8 characters 
 **Initializing the database and wiring up the webhook**
 After deploying the function app, it may take a while for the function to be fully live. This can be an issue for creating an API subscription (webhook) since Strava requires an immediate response. When the script is executed, you'll see whether it was successful. 
 If not, get the function-app's name from Azure Portal (strava-function-app-{random_8_digits}), and Strava's client id and client secret from Strava (from https://www.strava.com/settings/api). Replace these values into the corresponding `< ... >`'s and run
-`curl -X POST https://www.strava.com/api/v3/push_subscriptions -F client_id=<your_client_id> -F client_secret=<your_client_secret> -F callback_url=https://<your_function_apps_name>.azurewebsites.net/api/strava-webhook -F verify_token=STRAVA`
+```
+curl -X POST https://www.strava.com/api/v3/push_subscriptions -F client_id=<your_client_id> -F client_secret=<your_client_secret> -F callback_url=https://<your_function_apps_name>.azurewebsites.net/api/strava-webhook -F verify_token=STRAVA
+```
 If there remain some issues, check https://developers.strava.com/docs/webhooks/ . In particular, if there is already an active subscription, this has to be deleted first.
 
