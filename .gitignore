@@ -1,0 +1,42 @@
+**/__azurite__/
+
+# Ignore all hidden files & directories in subfolders (dotfiles)
+**/.*
+__*
+.venv/
+venv/
+
+# …but keep this .gitignore itself
+!.gitignore
+
+# !.github/
+# !.vscode/
+# !.devcontainer/
+# !.husky/
+
+# Local secrets (NEVER commit)
+local.settings.json
+secrets.json
+
+# Function core tools artifacts
+bin/
+obj/
+
+.scm/
+
+
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+.pytest_cache/
+.mypy_cache/
+.python_packages/
+.venv/
+venv/
+env/
+pip-wheel-metadata/
+.coverage
+htmlcov/
