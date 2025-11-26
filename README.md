@@ -24,7 +24,7 @@ It is intended to demonstrate:
 
 2. A **serverless Function** (Azure Function):
    - A webhook endpoint for Strava activity updates (create, delete, update)
-   - A http trigger to reset the SQL database
+   - A http trigger to set up the SQL database
 
 3. A **cloud SQL database and Blob storage**:
    - stores normalized activity data in an SQL database ready to be queried
