@@ -1,4 +1,4 @@
-# 🚴‍♂️ Strava Activity Scraper (Cloud-Native, Fully Automated)
+# 🚴‍♂️ Strava Activity Scraper on Azure (Cloud-Native, Fully Automated)
 
 This project automatically pulls Strava activities, stores them in the cloud, and keeps them up to date. Everything is **end-to-end automated**, from infrastructure provisioning to webhook wiring and database initialization.
 
