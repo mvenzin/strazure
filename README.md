@@ -43,7 +43,7 @@ It is intended to demonstrate:
   - Activity fetcher / backfill logic
   - Database layer (migrations + schema initialization)
 
-- **Automation** (run `bash script.sh`)
+- **Automation** (run `cd setup bash script.sh`)
   - Sets up environment
   - Connects to Strava and Azure to authenticate
   - Prompts for necessary information (SQL-login, home IP address to query database, etc.)
