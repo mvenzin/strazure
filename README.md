@@ -34,16 +34,16 @@ It is intended to demonstrate:
 
 ## Components
 
-- **Infrastructure** (see `infra\`)
+- **Infrastructure** (see `infra/`)
   - Terraform configurations
   - Key Vault, Function App, SQL Database, Storage, Role Assignments, etc.
 
-- **Application** (see `func\`)
+- **Application** (see `func/`)
   - Strava webhook handler
   - Activity fetcher / backfill logic
   - Database layer (migrations + schema initialization)
 
-- **Automation** (run `cd setup bash script.sh`)
+- **Automation** (run `setup/`)
   - Sets up environment
   - Connects to Strava and Azure to authenticate
   - Prompts for necessary information (SQL-login, home IP address to query database, etc.)
@@ -76,7 +76,8 @@ Before running the project you’ll need:
 
 The easiest way to get everything running is via the terminal:
 
-```bash script.sh```
+```cd setup            ```
+```bash script.sh      ```
 
 You will be prompted for the necessary logins and authorizations. For the Strava authorization, the browser will open automatically for you to do the necessary confirmations (log-in and authorize selection).
 
