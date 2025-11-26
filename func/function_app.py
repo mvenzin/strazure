@@ -44,14 +44,12 @@ def strava_webhook(req: func.HttpRequest, activity_queue: func.Out[str]) -> func
         except ValueError:
             return func.HttpResponse("Invalid JSON", status_code=400)
 
-        # Acknowledge FAST; do work asynchronously
-        # Enqueue the raw event for processing
         activity_queue.set(json.dumps(evt))
         return func.HttpResponse(status_code=200)
 
     return func.HttpResponse(status_code=405)
 
-# 2) Queue-triggered processor (does the heavy work)
+# 2) Queue-triggered processor (processes the activity events))
 @app.function_name(name="StravaActivityProcessor")
 @app.queue_trigger(arg_name="msg", queue_name="strava-activity", connection="AzureWebJobsStorage")
 def strava_activity_processor(msg: func.QueueMessage) -> None:

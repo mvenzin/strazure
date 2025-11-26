@@ -11,7 +11,7 @@ from get_strava_client import get_strava_client
 from get_sql_conn import get_sql_conn
 from get_blob_client import get_blob_client
 
-# Fetch new activities since last accessed activity and store them in the database
+# helper functions 
 def to_mapping(obj):
     if isinstance(obj, dict):                 # already a dict
             return obj
@@ -83,8 +83,6 @@ def initialize():
     conn = get_sql_conn()
     cursor = conn.cursor()
     
-
-    #initialize database
     sql_str = """ drop table if exists dbo.StravaActivity_bronze;
     CREATE TABLE dbo.StravaActivity_bronze (
         id BIGINT NOT NULL PRIMARY KEY,

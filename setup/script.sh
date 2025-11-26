@@ -52,6 +52,9 @@ echo "Now we deploy the function ${FUNCTION_APP_NAME}."
 func azure functionapp publish "$FUNCTION_APP_NAME" 
 az functionapp restart -g strava_resources -n $FUNCTION_APP_NAME
 sleep 20
+
+# You might have to run this part separately. I recommend first verifying on the portal that everything is set up.
+
 echo "We start downloading all past activities, this may take a while."
 open https://${FUNCTION_APP_NAME}.azurewebsites.net/api/http_trigger?name=initialize
 
