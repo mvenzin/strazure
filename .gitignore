@@ -1,43 +1,23 @@
-**/__azurite__/
+!.terraform.lock.hcl
+!.gitignore
 
-# Ignore all hidden files & directories in subfolders (dotfiles)
+**/__azurite__/
 **/.*
 __*
 .venv/
 venv/
-
-# Local Terraform files
 .terraform/
 *.tfstate
 *.tfstate.*
 crash.log
 crash.*.log
-
-# Exclude sensitive variable files (optional)
 terraform.tfvars
 *.auto.tfvars
-
-!.terraform.lock.hcl
-
-# …but keep this .gitignore itself
-!.gitignore
-
-# !.github/
-# !.vscode/
-# !.devcontainer/
-# !.husky/
-
-# Local secrets (NEVER commit)
 local.settings.json
 secrets.json
-
-# Function core tools artifacts
 bin/
 obj/
-
 .scm/
-
-
 __pycache__/
 *.py[cod]
 *.pyo
@@ -47,8 +27,6 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 .python_packages/
-.venv/
-venv/
 env/
 pip-wheel-metadata/
 .coverage
